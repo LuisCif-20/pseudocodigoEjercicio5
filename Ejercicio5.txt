@@ -1,0 +1,34 @@
+Proceso
+	var ingresar
+	var contadorhombres <- 0
+	var contadormujeres <- 0
+	Escribir "Ingresa el numero de edades a registrar"
+	Leer ingresar
+	Para i = 0, hasta i < ingresar, i = i + 1
+		var sexo
+		var edad
+		Escribir "Ingrese el sexo"
+		Escribir "Pulse 1 si es mujes, pulse 2 si es hombre"
+		Leer sexo
+		Si sexo = 1
+			Escribir "Ingrese la edad"
+			Leer edad
+			Si edad > 18
+				contadormujeres = contadormujeres + 1
+			Finsi
+		Sino
+			Si sexo = 2
+				Escribir "Ingrese la edad"
+				Leer edad
+				Si edad < 18
+					contadorhombres = contadorhombres +1
+				FinSi
+			Sino
+				Escribir "La opcion que ingreso no es valida"
+			FinSi
+		FinSi
+
+	FinPara
+	Escribir "Hay " + contadorhombres + " hombres menores de edad"
+	Escribir "Hay " + contadormujeres + " mujeres mayores de edad"
+FinProceso
